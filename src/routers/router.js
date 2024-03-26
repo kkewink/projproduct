@@ -11,7 +11,7 @@ router.put('/products/:id', productController.updateProduct); // foi
 router.delete('/products/:id', productController.deleteProduct); // foi
 
 
-router.get('/users/listAllUser', userController.listAllUser);
+router.get('/users/listAllUser', userController.listAllUser); 
 router.get('/users/listUserID/:id', userController.listAllUserID);
 router.post('/users/createUser', userController.createUser);
 router.put('/users/updateUser/:id', userController.updateUser);

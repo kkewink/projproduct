@@ -1,0 +1,8 @@
+
+IP:26.112.31.58
+
+http://localhost:3001/users/listAllUser - Listar usuario
+http://localhost:3001/users/listUserID/:id - lista apenas um usuario pelo id
+http://localhost:3001/users/createUser - Criar usuario
+http://localhost:3001/users/updateUser/:id - Atualizar Usuario
+http://localhost:3001/users/deleteUser/:id - Deletar Usuario
