@@ -10,16 +10,16 @@ exports.listAllUser = async (req, res) => {
     }
 };
 
-exports.listAllUserID = async (req, res) => {
+exports.listUserID = async (req, res) => {
     try {
-        const user = await userRepository.listAllUserID(req.params.id);
+        const user = await userRepository.listUserID(req.params.id);
         if(!user) {
             res.status(404).json({ error:'User não encontrado'});
         }else {
             res.status(200).json(user);
         }
     } catch (error) {
-        res.status(500).json({error: err.toString ()});
+        res.status(500).json({error: error.toString ()});
     }
 };
 

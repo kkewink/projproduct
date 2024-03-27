@@ -36,7 +36,7 @@ static async writeUsersToFile(user){
     })
 }
 
-static async getAllUser() {
+static async listAllUser() {
     const users = await this.getUsers();
     return users;
 }
@@ -49,14 +49,14 @@ static async createUser(user) {
     return insertDB;
 }
 
-static async getUsersById(id) {
+static async listUserID(id) {
     const users = await this.getUsers();
     return users.find(user => user.id === parseInt(id));
 }
 
 static async updateUser(id, user) {
     const users = await this.getUsers();
-    const index = user.findIndex(p => p.id == parsseInt(id));
+    const index = users.findIndex(p => p.id == parseInt(id));
     if (index === -1) {
         return null;
     }
